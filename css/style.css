@@ -1,0 +1,60 @@
+
+:root{
+    --dark-blue: #051E34;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* .debug{
+    border: solid 1px red;
+} */
+
+header #search{
+    width: calc(100% - 50px);
+}
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    position: fixed;
+}
+nav{
+    width: 200px;
+    height: 100vh;
+    flex-shrink: 0;
+}
+main{
+    flex-grow: 1;
+    height: 100vh;
+    overflow-y: auto;
+}
+#main-top{
+    height: auto;
+}
+#main-bottom{
+    height: calc(100vh - 100px);
+}
+#side-bar{
+    background-image: url("/img/sidebar-bg.png");
+    background-color: var(--dark-blue);
+}
+#side-bar-top{
+    width: 100%;
+    height: calc(100% - 80px);
+}
+#side-bar-bottom{
+    width: 100%;
+    height: 80px;
+}
+
+
+
+
+/* settings colo - background */
+
