@@ -30,6 +30,7 @@ header #search{
 }
 
 main{
+    width: calc(100% - 200px);
     flex-grow: 1;
     height: 100vh;
     overflow-y: auto;
@@ -45,7 +46,7 @@ main{
     background-color: var(--dark-blue);
     width: 200px;
     height: 100vh;
-    flex-shrink: 0;
+
 }
 #side-bar-top{
     width: 100%;
@@ -66,8 +67,7 @@ main{
 }
 
 .circle{
-    border-radius: 50%;
-    
+    border-radius: 50%;   
 }
 .width-120{
     width: 120px;
@@ -96,6 +96,40 @@ main{
 .yellow{
     color: var(--yellow);
 }
+
+
+/* hover effect */
+
+#side-bar ul li:hover{
+    background-color: rgba(255, 255, 255, 0.374);
+
+}
+
+
+#main-top #btn-hover:hover{
+    background-color: white;
+    color: var(--blue-btn) !important;
+}
+#main-top .btn-hover:hover{
+    background-color: #114388 !important;
+}
+
+
+#main-bottom table button:first-child:hover{
+    background-color: rgb(47, 255, 0) !important;
+}
+#main-bottom table button:first-child:hover .fa-solid{
+    color: white !important;
+}
+#main-bottom table button:last-child:hover{
+    background-color: rgb(255, 55, 0) !important;
+}
+#main-bottom table button:last-child:hover .fa-solid{
+    color: white !important;
+}
+
+
+
 
 
 @media screen and (max-width: 576px ) {
