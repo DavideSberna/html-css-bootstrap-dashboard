@@ -1,6 +1,9 @@
 
 :root{
     --dark-blue: #051E34;
+    --blue: #1B72E8;
+    --blue-btn: #165BBA;
+    --yellow: #FF8F00;
 }
 
 
@@ -9,6 +12,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
 /* .debug{
     border: solid 1px red;
@@ -46,19 +50,50 @@ main{
 }
 #side-bar-top{
     width: 100%;
-    height: calc(100% - 80px);
+    min-height: 200px;
+    height: calc(100% - 150px);
 }
 #side-bar-bottom{
     width: 100%;
     height: 80px;
 }
-.img-table{
-    width: 25px;
-    height: 25px;
+.icon-25{
+    width: 30px;
+    height: 30px;
+}
+.icon-27{
+    width: 33px;
+    height: 33px;
+}
+
+.circle{
+    border-radius: 50%;
+    
+}
+.width-120{
+    width: 120px;
+}
+.width-80{
+    width: 80px;
+}
+.width-calc{
+    min-width: 120px;
+}
+.height{
+    height: 30px;
 }
 
 
 
 
-/* settings colo - background */
+/* settings color - background */
 
+.blue{
+    background-color: var(--blue);
+}
+.blue-btn{
+    background-color: var(--blue-btn);
+}
+.yellow{
+    color: var(--yellow);
+}
