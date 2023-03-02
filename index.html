@@ -62,15 +62,15 @@
                     <ul class="">
                         <li class="nav-item d-flex pt-2 pb-2">
                             <a class="nav-link me-2" href="#"><i class="fa-solid fa-house"></i></a>
-                            <a class="nav-link" href="#">Home</a>
+                            <a class="nav-link remove" href="#">Home</a>
                         </li>
                         <li class="nav-item d-flex pt-2 pb-2">
                             <a class="nav-link me-2" href="#"><i class="fa-solid fa-chart-simple"></i></a>
-                            <a class="nav-link" href="#">Stats</a>
+                            <a class="nav-link remove" href="#">Stats</a>
                         </li>
                         <li class="nav-item d-flex pt-2 pb-2">
                             <a class="nav-link me-2" href="#"><i class="fa-solid fa-signal"></i></a>
-                            <a class="nav-link" href="#">Signals</a>
+                            <a class="nav-link remove" href="#">Signals</a>
                         </li>
                     </ul>
                 </div>
@@ -80,7 +80,7 @@
                     <ul class="">
                         <li class="nav-item d-flex pt-2 pb-2">
                             <a class="nav-link me-2" href="#"><i class="fa-solid fa-gear"></i></a>
-                            <a class="nav-link" href="#">Admin</a>
+                            <a class="nav-link remove" href="#">Admin</a>
                         </li>
                     </ul>
                 </div>
@@ -88,11 +88,11 @@
         </nav>
         <main class="debug">
             <section id="main-top" class="debug container-fluid blue p-4">
-                <div class="d-flex justify-content-between align-items-center text-white">
-                    <div>
+                <div class="d-flex justify-content-between align-items-center flex-wrap text-white">
+                    <div class="col-12 col-sm-4 pt-4 p-sm-0 order-2 order-sm-1">
                         <div class="d-flex flex-wrap align-items-center">
                             <div class="pe-2">
-                                <h3 class="">Boolean</h3>
+                                <h3 class="mb-0">Boolean</h3>
                             </div>
                             <div class="ms-1 me-1">
                                 <span class="badge rounded-pill blue-btn">Piano blaze</span>
@@ -105,18 +105,21 @@
                             <div class="ms-1 me-1">
                                 <span class="badge"><i class="fa-solid fa-angles-right fs-6"></i></span>
                             </div>
-                            <div class="ms-1 me-1">
+                            <div class="ms-1 me-1 d-block d-md-none">
+                                <span class="badge rounded-pill blue-btn fw-bolder">+</span>
+                            </div>
+                            <div class="ms-1 me-1 d-none d-md-block">
                                 <span class="badge rounded-pill blue-btn">Boolean mobile app</span>
                             </div>
-                            <div class="ms-1 me-1">
+                            <div class="ms-1 me-1 d-none d-md-block">
                                 <span class="badge rounded-pill blue-btn">Boolean web app</span>
                             </div>
-                            <div class="ms-1 me-1">
+                            <div class="ms-1 me-1 d-none d-md-block">
                                 <span class="badge rounded-pill blue-btn">Boolean blog app</span>
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div class="col-12 col-sm-4 pt-4 p-sm-0 order-3 order-sm-2">
                         <div>
                             <p class="mb-0">Studenti online negli ultimi 30 minuti</p>
                         </div>
@@ -124,79 +127,98 @@
                             <h3>125</h3>
                         </div>
                     </div>
-                    <div>
+                    <div class="col-12 col-sm-4 pt-4 p-sm-0 order-1 order-sm-3">
                         <div class="d-flex align-items-center">
                             <div class="pe-2">
                                 <p class="mb-0">Nuovo studente</p>
                             </div>
                             <div>
                                 <button class="btn text-white border border-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">+</button>
-                                <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-                                <div class="offcanvas-header">
-                                    <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                </div>
-                                <div class="offcanvas-body">
-                                    <form>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-3 w-100 me-3">
-                                              <label for="Inputname1" name="nome" class="form-label">Nome</label>
-                                              <input type="text" class="form-control" id="Inputname1" aria-describedby="nameHelp">
-                                            </div>
-                                            <div class="mb-3 w-100">
-                                              <label for="Inputcognome1" name="cognome" class="form-label">Cognome</label>
-                                              <input type="text" class="form-control" id="Inputcognome1">
-                                            </div>
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                                        <div class="offcanvas-header">
+                                            <h5 class="offcanvas-title" id="offcanvasRightLabel">Offcanvas right</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                                         </div>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-3 w-100 me-3">
-                                              <label for="InputEmail1" class="form-label">Email</label>
-                                              <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="mb-3 w-100">
-                                              <label for="InputPassword1" class="form-label">Password</label>
-                                              <input type="password" class="form-control" id="InputPassword1">
-                                            </div>
+                                        <div class="offcanvas-body">
+                                            <form>
+                                                <div class="d-flex flex-wrap justify-content-between">
+                                                    <div class="mb-3 p-2 col-12 col-sm-6">
+                                                    <label for="Inputname1" name="nome" class="form-label">Nome</label>
+                                                    <input type="text" class="form-control" id="Inputname1" aria-describedby="nameHelp">
+                                                    </div>
+                                                    <div class="mb-3 p-2 col-12 col-sm-6">
+                                                    <label for="Inputcognome1" name="cognome" class="form-label">Cognome</label>
+                                                    <input type="text" class="form-control" id="Inputcognome1">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-wrap justify-content-between">
+                                                    <div class="mb-3 p-2 col-12 col-sm-6">
+                                                        <label for="email" class="form-label">Email</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                                            <input type="email" class="form-control" aria-label="email" aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                    <div class="mb-3 p-2 col-12 col-sm-6">
+                                                    <label for="InputPassword1" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="InputPassword1">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-wrap justify-content-between">
+                                                    
+                                                    <div class="mb-3 p-2 col-12 col-sm-6">
+                                                        <label for="email" class="form-label">Indirizzo Email</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                                            <input type="email" class="form-control" aria-label="email" aria-describedby="basic-addon1">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="mb-3 p-2 col-12 col-sm-6">
+                                                    <label for="InputPassword1" class="form-label">Password</label>
+                                                    <input type="password" class="form-control" id="InputPassword1">
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="mb-3 p-2 col-12">
+                                                    <label for="address1" class="form-label">Indirizzo</label>
+                                                    <input type="text" class="form-control" id="address1" aria-describedby="emailHelp">
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-wrap justify-content-between">
+                                                    <div class="mb-3 p-2 col-12 col-sm-4">
+                                                    <label for="Inputcitta1" class="form-label">Città</label>
+                                                    <input type="text" class="form-control" id="Inputcitta1" aria-describedby="cittaHelp">
+                                                    </div>
+                                                    <div class="mb-3 p-2 col-12 col-sm-4">
+                                                        <label for="email" class="form-label">Stato</label>
+                                                        <select class="form-select" aria-label="Default select example">
+                                                            <option selected>Scegli...</option>
+                                                            <option value="1">Italia</option>
+                                                            <option value="2">Inghilterra</option>
+                                                            <option value="3">Malta</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="mb-3 p-2 col-12 col-sm-4">
+                                                    <label for="Inputcap1" class="form-label text-uppercase">Cap</label>
+                                                    <input type="text" class="form-control" id="Inputcap1">
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div class="mb-3 p-2">
+                                                        <label for="formFile" class="form-label">Foto</label>
+                                                        <input class="form-control" type="file" id="formFile">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3 form-check">
+                                                <input type="checkbox" class="form-check-input" id="Check1">
+                                                <label class="form-check-label" for="Check1">Check me out</label>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                                                <button type="button" class="btn btn-warning">Warning</button>
+                                            </form>
                                         </div>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-3 w-100 me-3">
-                                              <label for="InputEmail1" class="form-label">Indirizzo Email</label>
-                                              <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
-                                            </div>
-                                            <div class="mb-3 w-100">
-                                              <label for="InputPassword1" class="form-label">Password</label>
-                                              <input type="password" class="form-control" id="InputPassword1">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="mb-3 w-100 me-3">
-                                              <label for="address1" class="form-label">Indirizzo</label>
-                                              <input type="text" class="form-control" id="address1" aria-describedby="emailHelp">
-                                            </div>
-                                        </div>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="mb-3 w-100 me-3">
-                                              <label for="Inputcitta1" class="form-label">Città</label>
-                                              <input type="text" class="form-control" id="Inputcitta1" aria-describedby="cittaHelp">
-                                            </div>
-                                            <div class="mb-3 w-100 me-3">
-                                              <label for="Inputstato1" class="form-label">Stato</label>
-                                              <input type="text" class="form-control" id="Inputstato1">
-                                            </div>
-                                            <div class="mb-3 w-100">
-                                              <label for="Inputcap1" class="form-label text-uppercase">Cap</label>
-                                              <input type="text" class="form-control" id="Inputcap1">
-                                            </div>
-                                        </div>
-                                        <div class="mb-3 form-check">
-                                          <input type="checkbox" class="form-check-input" id="Check1">
-                                          <label class="form-check-label" for="Check1">Check me out</label>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary me-2">Submit</button>
-                                        <button type="button" class="btn btn-warning">Warning</button>
-                                      </form>
-                                </div>
-                                </div>
+                                    </div>
                             </div>
                         </div>
                     </div>
@@ -214,9 +236,9 @@
                                     <table class="table">
                                         <thead>
                                           <tr>
-                                            <th scope="col" class="width-calc text-start text-body-secondary">Name</th>
-                                            <th scope="col" class="width-120 text-center text-body-secondary">Data inizio</th>
-                                            <th scope="col" class="width-120 text-center text-body-secondary">Roi</th>
+                                            <th scope="col" class="width-calc text-start text-body-secondary">Nome</th>
+                                            <th scope="col" class="width-120 text-center text-body-secondary remove">Data inizio</th>
+                                            <th scope="col" class="width-120 text-center text-body-secondary remove">Roi</th>
                                             <th scope="col" class="width-120 text-center text-body-secondary">Stato</th>
                                             <th scope="col" class="width-120 text-center text-body-secondary">Azioni</th>
                                           </tr>
@@ -231,8 +253,8 @@
                                                     <p class="mb-0">Classe 75</p>
                                                 </div>
                                             </td>
-                                            <td class="width-120 text-center">15 Feb 2021</td>
-                                            <td class="width-120 text-center">20%</td>
+                                            <td class="width-120 text-center remove">15 Feb 2021</td>
+                                            <td class="width-120 text-center remove">20%</td>
                                             <td class="width-120 text-center"><span class="badge text-bg-success">Done</span></td>
                                             <td class="width-120 text-center">
                                                 <button type="button" class="btn border-dark-subtle icon-27 p-0 me-1"><i class="fa-solid fa-pen text-body-secondary"></i></button>
@@ -248,8 +270,8 @@
                                                     <p class="mb-0">Classe 75</p>
                                                 </div>
                                             </td>
-                                            <td class="width-120 text-center">15 Feb 2021</td>
-                                            <td class="width-120 text-center">20%</td>
+                                            <td class="width-120 text-center remove">15 Feb 2021</td>
+                                            <td class="width-120 text-center remove">20%</td>
                                             <td class="width-120 text-center"><span class="badge text-bg-success">Done</span></td>
                                             <td class="width-120 text-center">
                                                 <button type="button" class="btn border-dark-subtle icon-27 p-0 me-1"><i class="fa-solid fa-pen text-body-secondary"></i></button>
@@ -265,8 +287,8 @@
                                                     <p class="mb-0">Classe 75</p>
                                                 </div>
                                             </td>
-                                            <td class="width-120 text-center">15 Feb 2021</td>
-                                            <td class="width-120 text-center">20%</td>
+                                            <td class="width-120 text-center remove">15 Feb 2021</td>
+                                            <td class="width-120 text-center remove">20%</td>
                                             <td class="width-120 text-center"><span class="badge text-bg-success">Done</span></td>
                                             <td class="width-120 text-center">
                                                 <button type="button" class="btn border-dark-subtle icon-27 p-0 me-1"><i class="fa-solid fa-pen text-body-secondary"></i></button>
@@ -282,8 +304,8 @@
                                                     <p class="mb-0">Classe 75</p>
                                                 </div>
                                             </td>
-                                            <td class="width-120 text-center">15 Feb 2021</td>
-                                            <td class="width-120 text-center">20%</td>
+                                            <td class="width-120 text-center remove">15 Feb 2021</td>
+                                            <td class="width-120 text-center remove">20%</td>
                                             <td class="width-120 text-center"><span class="badge text-bg-success">Done</span></td>
                                             <td class="width-120 text-center">
                                                 <button type="button" class="btn border-dark-subtle icon-27 p-0 me-1"><i class="fa-solid fa-pen text-body-secondary"></i></button>
@@ -299,8 +321,8 @@
                                                     <p class="mb-0">Classe 75</p>
                                                 </div>
                                             </td>
-                                            <td class="width-120 text-center">15 Feb 2021</td>
-                                            <td class="width-120 text-center">20%</td>
+                                            <td class="width-120 text-center remove">15 Feb 2021</td>
+                                            <td class="width-120 text-center remove">20%</td>
                                             <td class="width-120 text-center"><span class="badge text-bg-success">Done</span></td>
                                             <td class="width-120 text-center">
                                                 <button type="button" class="btn border-dark-subtle icon-27 p-0 me-1"><i class="fa-solid fa-pen text-body-secondary"></i></button>
@@ -316,8 +338,8 @@
                                                     <p class="mb-0">Classe 75</p>
                                                 </div>
                                             </td>
-                                            <td class="width-120 text-center">15 Feb 2021</td>
-                                            <td class="width-120 text-center">20%</td>
+                                            <td class="width-120 text-center remove">15 Feb 2021</td>
+                                            <td class="width-120 text-center remove">20%</td>
                                             <td class="width-120 text-center"><span class="badge text-bg-success">Done</span></td>
                                             <td class="width-120 text-center">
                                                 <button type="button" class="btn border-dark-subtle icon-27 p-0 me-1"><i class="fa-solid fa-pen text-body-secondary"></i></button>
@@ -333,8 +355,8 @@
                                                     <p class="mb-0">Classe 75</p>
                                                 </div>
                                             </td>
-                                            <td class="width-120 text-center">15 Feb 2021</td>
-                                            <td class="width-120 text-center">20%</td>
+                                            <td class="width-120 text-center remove">15 Feb 2021</td>
+                                            <td class="width-120 text-center remove">20%</td>
                                             <td class="width-120 text-center"><span class="badge text-bg-success">Done</span></td>
                                             <td class="width-120 text-center">
                                                 <button type="button" class="btn border-dark-subtle icon-27 p-0 me-1"><i class="fa-solid fa-pen text-body-secondary"></i></button>
@@ -350,8 +372,8 @@
                                                     <p class="mb-0">Classe 75</p>
                                                 </div>
                                             </td>
-                                            <td class="width-120 text-center">15 Feb 2021</td>
-                                            <td class="width-120 text-center">20%</td>
+                                            <td class="width-120 text-center remove">15 Feb 2021</td>
+                                            <td class="width-120 text-center remove">20%</td>
                                             <td class="width-120 text-center"><span class="badge text-bg-success">Done</span></td>
                                             <td class="width-120 text-center">
                                                 <button type="button" class="btn border-dark-subtle icon-27 p-0 me-1"><i class="fa-solid fa-pen text-body-secondary"></i></button>

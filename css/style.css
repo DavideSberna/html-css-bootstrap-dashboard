@@ -28,11 +28,7 @@ header #search{
     display: flex;
     position: fixed;
 }
-nav{
-    width: 200px;
-    height: 100vh;
-    flex-shrink: 0;
-}
+
 main{
     flex-grow: 1;
     height: 100vh;
@@ -47,6 +43,9 @@ main{
 #side-bar{
     background-image: url("/img/sidebar-bg.png");
     background-color: var(--dark-blue);
+    width: 200px;
+    height: 100vh;
+    flex-shrink: 0;
 }
 #side-bar-top{
     width: 100%;
@@ -96,4 +95,34 @@ main{
 }
 .yellow{
     color: var(--yellow);
+}
+
+
+@media screen and (max-width: 576px ) {
+    #side-bar{
+        width: 80px;
+    }
+    #main-bottom .remove{
+        display: none;
+    }
+    #side-bar .remove{
+        display: none;
+    }
+    .offcanvas{
+        width: 100% !important
+    }
+}
+
+@media screen and (max-width: 768px ) {
+    #side-bar{
+        width: 80px;
+    }
+    
+    #side-bar .remove{
+        display: none;
+    }
+
+    .offcanvas{
+        width: 100% !important
+    }
 }
